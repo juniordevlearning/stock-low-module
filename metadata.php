@@ -12,7 +12,7 @@ $aModule = [
     'title'       => 'StockLow', 
     'version'     => '1.0',
     'author'      => 'Philipp Nopper',
-    'email'       => 'juniordevlearning@gmail.com'
+    'email'       => 'juniordevlearning@gmail.com',
     'extend'     => [
         \OxidEsales\Eshop\Application\Model\Article::class => pn\StockLow\Application\Model\StockLowArticle::class
     ],
