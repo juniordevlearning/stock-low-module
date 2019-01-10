@@ -113,7 +113,7 @@
                 [{oxmultilang ident="ARTICLE_STOCK_LOWSTOCKTEXT"}]
             </td>
             <td class="edittext">
-                <input type="text" class="editinput" size="40" name="editval[oxarticles__oxlowstocktext]" value="[{$edit->getLowStockMessage($edit->oxarticles__oxid->value)}]" >
+                <input type="text" class="editinput" size="40" name="editval[oxarticles__pnlowstocktext]" value="[{$edit->getLowStockMessage($edit->oxarticles__oxid->value)}]" >
                 [{oxinputhelp ident="HELP_ARTICLE_STOCK_LOWSTOCKTEXT"}]
             </td>
         </tr>
