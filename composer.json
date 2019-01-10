@@ -1,5 +1,5 @@
 {
-    "name": "pn/stock-low-module",
+    "name": "jdl/stock-low-module",
     "description": "This will give you the option to add custom text if stock is low",
     "type": "oxideshop-module",
     "extra": {
