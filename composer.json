@@ -1,0 +1,18 @@
+{
+    "name": "pn/stock-low-module",
+    "description": "This will give you the option to add custom text if stock is low",
+    "type": "oxideshop-module",
+    "extra": {
+        "oxideshop": {
+            "target-directory": "pn/stocklow"
+        }
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "pn\\StockLow\\": "../../../source/modules/pn/stocklow"
+        }
+    }
+}
