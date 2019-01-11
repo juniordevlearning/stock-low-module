@@ -6,8 +6,8 @@ Beim Aktivieren des Moduls wird in der Tabelle oxArticles ein extra Feld pnlowst
 
 ## Installation
 
-Verbinde dich mit deinem Webserver über SSH und navigiere in das Shopverzeichnis "source/modules/" dort folgenden Befehl ausführen: composer require jdl/stock-low-module:dev-master. 
-Anschließend alle Meldungen mit y bestätigen. Nun kann das Modul im Admin aktiviert werden. Wenn es im Admin Probleme gibt kann es helfen den tmp ordner zu leeren und die views neu zu generieren.
+Verbinde dich mit deinem Webserver über SSH und navigiere in das Shopverzeichnis "source/modules/" dort folgenden Befehl ausführen: composer require jdl/stock-low-module. 
+Anschließend alle Meldungen mit y bestätigen und im Admin das Modul aktivieren. Danach noch einmal unter Service -> Tools die Views updaten und fertig.
 
 
 ## Anmerkungen
