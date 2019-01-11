@@ -15,15 +15,22 @@
     </span>
 <!--stocklowmodule-->
 [{elseif $oDetailsProduct->getStockStatus() == 1}]
-    <link itemprop="availability" href="http://schema.org/InStock"/>
-    <span class="stockFlag lowStock">
-        <i class="fa fa-circle text-warning"></i>
-        [{if $oDetailsProduct->getLowStockMessage($oDetailsProduct->oxarticles__oxid->value)}]
-            [{$oDetailsProduct->getLowStockMessage($oDetailsProduct->oxarticles__oxid->value)}]
-        [{else}]
-            [{oxmultilang ident="LOW_STOCK"}]
-        [{/if}]
-    </span>
+    [{if $oView->getActiveLangAbbr() == "de"}]
+        <link itemprop="availability" href="http://schema.org/InStock"/>
+        <span class="stockFlag lowStock">
+            <i class="fa fa-circle text-warning"></i>
+            [{if $oDetailsProduct->getLowStockMessage($oDetailsProduct->oxarticles__oxid->value)}]
+                [{$oDetailsProduct->getLowStockMessage($oDetailsProduct->oxarticles__oxid->value)}]
+            [{else}]
+                [{oxmultilang ident="LOW_STOCK"}]
+            [{/if}]
+        </span>
+    [{else}]
+        <link itemprop="availability" href="http://schema.org/InStock"/>
+        <span class="stockFlag lowStock">
+            <i class="fa fa-circle text-warning"></i> [{oxmultilang ident="LOW_STOCK"}]
+        </span>
+    [{/if}]
 <!--stocklowmodule END-->
 [{elseif $oDetailsProduct->getStockStatus() == 0}]
     <span class="stockFlag">
