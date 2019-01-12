@@ -14,4 +14,12 @@ class StockLowArticle extends StockLowArticle_parent
 
         return $lowStockMessage[0][0];
     }
+
+    public function getLowStockMessageEn($oxid)
+    {
+        $lowStock = DatabaseProvider::getDb()->select("Select pnlowstocktext_1 from oxarticles where oxid = '$oxid'");
+        $lowStockMessage = $lowStock->fetchAll();
+
+        return $lowStockMessage[0][0];
+    }
 }

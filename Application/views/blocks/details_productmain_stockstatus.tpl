@@ -25,12 +25,23 @@
                 [{oxmultilang ident="LOW_STOCK"}]
             [{/if}]
         </span>
+    [{elseif $oView->getActiveLangAbbr() == "en"}]
+        <link itemprop="availability" href="http://schema.org/InStock"/>
+        <span class="stockFlag lowStock">
+            <i class="fa fa-circle text-warning"></i>
+            [{if $oDetailsProduct->getLowStockMessageEn($oDetailsProduct->oxarticles__oxid->value)}]
+                [{$oDetailsProduct->getLowStockMessageEn($oDetailsProduct->oxarticles__oxid->value)}]
+            [{else}]
+                [{oxmultilang ident="LOW_STOCK"}]
+            [{/if}]
+        </span>
     [{else}]
         <link itemprop="availability" href="http://schema.org/InStock"/>
         <span class="stockFlag lowStock">
             <i class="fa fa-circle text-warning"></i> [{oxmultilang ident="LOW_STOCK"}]
         </span>
     [{/if}]
+    
 <!--stocklowmodule END-->
 [{elseif $oDetailsProduct->getStockStatus() == 0}]
     <span class="stockFlag">
